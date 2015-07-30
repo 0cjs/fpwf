@@ -1,0 +1,37 @@
+#!/bin/bash
+set -e
+
+err() { echo 1>&2 ERROR: "$@"; success=true; exit 1; }
+
+success=false
+trap '$success || err "INTERNAL ERROR. FAILED!"' 0
+
+cd $(dirname $0)
+
+# Check that we have no uncommited or unknown files.
+git diff-index --quiet HEAD \
+    || err "You cannot release with uncommited changes."
+[ -z "$(git ls-files --exclude-standard --others)" ] \
+    || err "You cannot release with untracked files."
+source_sha=$(git show --quiet --pretty='format:%h')
+
+./jekyll build -q
+build_output=$(sed -n -e "s/'//g" -e 's/^destination: *//p' _config.yaml)
+[ -d "$build_output" ] || err "Build output not found: $build_output"
+
+branch_ref=refs/heads/gh-pages
+export GIT_INDEX_FILE=$(tempfile)
+
+git read-tree --empty
+git --work-tree=$build_output add -A
+tree_sha=$(git --work-tree=$build_output write-tree)
+# XXX Check to see if we're an empty commit (i.e., this tree is the same tree
+# used by the commit at $branch_ref) and exit here (with no error) if so.
+
+commit_msg="Build from source commit $source_sha."
+commit_sha=$(echo "$commit_msg" | git commit-tree $tree_sha -p $branch_ref)
+# XXX use -m below to update the log file as well
+# (See /usr/share/doc/git/contrib/examples/git-commit.sh for an example.)
+git update-ref $branch_ref $commit_sha
+
+success=true
