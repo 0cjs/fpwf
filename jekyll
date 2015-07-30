@@ -1,4 +1,15 @@
-#!/bin/bash
-jekyll_bin=$(ruby -rubygems -e 'puts Gem.bin_path("jekyll", "jekyll")')
-[ -n "$jekyll_bin" ] || { echo 1>&2 "Cannot find GEM jekyll binary."; exit 1; }
-exec "$jekyll_bin" "$@"
+#!/usr/bin/env ruby
+#
+# XXX This is a hack to add our `release` command to Jekyll. The
+# issue is that Jekyll doesn't read the _plugins directory until
+# after it's decided what subcommands are available. (From reading
+#     http://jekyllrb.com/docs/plugins/#commands
+# it appears that any new commands you add must be gemfiles, but
+# it's not clear to us right now how to create them or where to add
+# the `group :jekyll_plugins do ...` code.
+#
+
+require 'rubygems'
+require 'jekyll'
+require_relative '_plugins/release.rb'
+load Gem.bin_path('jekyll', 'jekyll')
