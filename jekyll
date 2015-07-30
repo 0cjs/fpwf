@@ -1,0 +1,4 @@
+#!/bin/bash
+jekyll_bin=$(ruby -rubygems -e 'puts Gem.bin_path("jekyll", "jekyll")')
+[ -n "$jekyll_bin" ] || { echo 1>&2 "Cannot find GEM jekyll binary."; exit 1; }
+exec "$jekyll_bin" "$@"
