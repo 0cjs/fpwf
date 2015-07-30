@@ -23,5 +23,5 @@ Building
 --------
 
 The `jekyll` script in the top-level directory will run the jekyll
-program from the GEM you installed above. It builds into the
-`.build/gh-pages/` directory.
+program from the GEM you installed above. It builds the site from
+the `src` directory into the `.build/gh-pages/` directory.
