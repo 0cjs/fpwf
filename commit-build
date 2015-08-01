@@ -20,7 +20,7 @@ build_output=$(sed -n -e "s/'//g" -e 's/^destination: *//p' _config.yaml)
 [ -d "$build_output" ] || err "Build output not found: $build_output"
 
 branch_ref=refs/heads/gh-pages
-export GIT_INDEX_FILE=$(tempfile)
+export GIT_INDEX_FILE=$(mktemp)
 
 git read-tree --empty
 git --work-tree=$build_output add -A
