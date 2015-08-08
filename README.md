@@ -4,9 +4,9 @@ Overview
 Source code and build system for the _Functional Programming with Friends_
 website.
 
-The output of this build will be put in to a checkout of the gh-pages
-branch of this repo, which will be automatically checked out under
-.build/gh-pages if necessary.
+Running `./jekyll release` will use our custom release plugin to do
+a build and commit the results (from `.build/gh-pages`) to the
+`gh-pages` branch of the repo.
 
 Prerequisites
 -------------
