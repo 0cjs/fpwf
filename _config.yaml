@@ -1,4 +1,5 @@
 ---
+# Docs can be found at http://jekyllrb.com/docs/home/
 destination: '.build/gh-pages/'
 source: 'src'
 plugins: './_plugins'
