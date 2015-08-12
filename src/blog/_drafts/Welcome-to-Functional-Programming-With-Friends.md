@@ -1,5 +1,6 @@
 ---
 layout: post
+author: Curt Sampson
 ---
 
 Functional Programming with Friends is a small group of developers that
