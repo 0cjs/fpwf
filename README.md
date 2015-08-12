@@ -16,8 +16,11 @@ the build, at the moment you need to have a reasonably recent version
 of Jekyll available on your system. If you do not have this, it's most
 easily installed with the following commands:
 
-    sudo aptitude install nodejs
+    sudo apt-get install ruby1.9.1-dev nodejs
     gem install -V --user-install jekyll
+
+(`ruby1.9.1-dev` is required for gem to be able to build native extensions.
+`nodejs` is required by Jekyll.)
 
 Building
 --------
