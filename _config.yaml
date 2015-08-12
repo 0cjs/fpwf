@@ -4,3 +4,10 @@ timezone: Asia/Tokyo
 destination: '.build/gh-pages/'
 source: 'src'
 plugins: './_plugins'
+
+defaults:
+  - scope:
+        path: 'blog'
+    values:
+        layout: post
+        author: 'XXX ADD AUTHOR KEY XXX'
