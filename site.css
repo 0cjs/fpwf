@@ -1,5 +1,10 @@
 header { font-size: 24pt; }
-header * { vertical-align: middle }
+header { display: table-row; }
+header > * {
+    vertical-align: middle;
+    display: table-cell;
+}
+
 .author { font-style: italic; }
 
 #content { max-width: 45em; }
