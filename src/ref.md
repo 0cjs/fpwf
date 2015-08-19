@@ -58,7 +58,8 @@ entry URLs start with `/blog`.
 ## Markdown
 
 * [Markdown Syntax Reference][msr]
-* XXX Which markdown generator is Jekyll using by default?
+* Jekyll uses [kramdown] to tranform markdown by default. This has some
+  nice extensions (e.g.: Footnotes, math, tables...)
 * XXX Is [RedCloth] built in? It looked like it from the build. That would
   allow use of Textile...
 * GitHub offers extra Markdown stuff like '@cjs-cynic-net' to reference
@@ -67,6 +68,7 @@ entry URLs start with `/blog`.
 
 [msr]: https://daringfireball.net/projects/markdown/syntax
 [RedCloth]: http://redcloth.org
+[kramdown]: http://kramdown.gettalong.org/syntax.html
 
 
 ## Templates
