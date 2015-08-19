@@ -3,18 +3,6 @@ layout: 'default'
 title: 'Functional Programming With Friends'
 ---
 
-<style>
-
-h1 { font-size: 3em; }
-h1 * { vertical-align: middle }
-
-</style>
-
-<h1>
-<img height='75' src='/img/184px-Commutative_diagram_for_morphism.png' />
-Functional Programming With Friends
-</h1>
-
 FPWF is a small group of programmers that messes around with functional
 programming and other ideas. It currently consists of:
 
