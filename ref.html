@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8"/> 
+    <title>Site Editing Quickref</title>
+</head><body>
+
+<style>
+h1 { font-size: 24pt; }
+h1 * { vertical-align: middle }
+</style>
+
+<h1>
+<img height='75' src='/img/184px-Commutative_diagram_for_morphism.png' />
+Functional Programming With Friends
+</h1>
+
+
+<h2 id="buildingtestingreleasing">Building/Testing/Releasing</h2>
+
+<p>Useful commands:</p>
+
+<ul>
+  <li><code>./jeckyll build</code></li>
+  <li><code>./jeckyll build -D</code></li>
+  <li><code>./jeckyll serve -D -w</code></li>
+  <li><code>./jeckyll release</code></li>
+</ul>
+
+<p><code>build</code> and <code>serve</code> take the same options. <code>-D</code> builds draft posts under
+today’s date under <a href="http:/blog">http:/blog</a>. <code>-w</code> watches for changes under <code>src/</code>
+and rebuilds (but does not rebuild when <code>_config.yml</code> changes!). You can
+also add <code>-H 0.0.0.0</code> to listen on the external interface if you need to
+easily show the test site to someone on a different host.</p>
+
+<p><code>release</code> does a clean build and uses <a href="https://github.com/cjs-cynic-net/git-commit-filetree">git-commit-filetree</a> to commit
+the new output to the <code>gh-pages</code> branch. (This is the branch served by
+<code>github.io</code> for project pages.) The <code>src/CNAME</code> file gives the virtual
+host name to which <code>github.io</code> should respond.</p>
+
+<p>Remember that after this you still need to push to actuall put the
+release on production.</p>
+
+<h2 id="jekyll">Jekyll</h2>
+
+<p>The <a href="http://jekyllrb.com/docs/home/">official documentation</a> is not terribly concise, nor is it
+really complete enough to be a serious tutorial. (For that, read the
+example sites below.) The short summary is:</p>
+
+<ul>
+  <li>Site is built from the <code>src/</code> directory into the
+target directory (<code>.build/gh-pages</code>).</li>
+  <li>Directories starting with <code>_</code> are special, and are not copied (at
+least not directly to target.</li>
+  <li><code>*.html</code> HTML files and <code>*.md</code> Markdown files with a YAML header are
+compiled using the templates in <code>_layouts</code> (which may include fragments
+from <code>_includes</code>) to <code>.html</code> files in the target. Source files may
+include template code too.</li>
+  <li>Everything else (including .md files without a YAML header) is
+copied straight through to the target.</li>
+</ul>
+
+<p>The <a href="http://jekyllrb.com/docs/structure/">Directory structure</a> documentation page gives an overview of
+the special directories. Note that directories such as <code>_posts</code> do not
+have to be under the root; we use <code>src/blog/_posts</code> to have our blog
+entry URLs start with <code>/blog</code>.</p>
+
+<h2 id="markdown">Markdown</h2>
+
+<ul>
+  <li><a href="https://daringfireball.net/projects/markdown/syntax">Markdown Syntax Reference</a></li>
+  <li>XXX Which markdown generator is Jekyll using by default?</li>
+  <li>XXX Is <a href="http://redcloth.org">RedCloth</a> built in? It looked like it from the build. That would
+allow use of Textile…</li>
+  <li>GitHub offers extra Markdown stuff like ‘@cjs-cynic-net’ to reference
+a github user, which we don’t. Maybe there’s a module that would let
+us do that? Do we need it?</li>
+</ul>
+
+<h2 id="templates">Templates</h2>
+
+<ul>
+  <li><a href="https://github.com/Shopify/liquid/wiki">Liquid</a>
+    <ul>
+      <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers">Template Reference</a> (“for Designers”)
+        <ul>
+          <li><a href="https://docs.shopify.com/themes/liquid-documentation/tags">Tags</a></li>
+          <li><a href="https://docs.shopify.com/themes/liquid-documentation/objects">Objects</a></li>
+          <li><a href="https://docs.shopify.com/themes/liquid-documentation/filters">Filters</a></li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers">Programming</a> (extending with filters, etc.)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-sites">Example Sites</h2>
+
+<p>These serve as further documentation and a source of ideas.</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/sites/">Example site list</a> from the Jekyll docs</li>
+  <li>The <a href="https://github.com/jekyll/jekyll/tree/master/site/">Jekyll Site source code</a> itself. In particular, they way they
+do the docs/<code>_docs</code> thing is interesting. (Uses collections? Note the
+side menu defined in a <a href="https://github.com/jekyll/jekyll/blob/master/site/_data/docs.yml">YAML file under _data</a>.)</li>
+</ul>
+
+<h2 id="things-to-fix">Things to Fix?</h2>
+
+<ul>
+  <li>Jekyll doesn’t read _plugins for extensions itself; they must be loaded
+before the Jekyll gem. WTF?</li>
+</ul>
+
+</body></html>
+
