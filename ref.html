@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8"/> 
+    <link rel='stylesheet' type='text/css' href='/site.css' />
     <title>Site Editing Quickref</title>
 </head><body>
 
-<style>
-h1 { font-size: 24pt; }
-h1 * { vertical-align: middle }
-</style>
-
-<h1>
-<img height='75' src='/img/184px-Commutative_diagram_for_morphism.png' />
+<header>
+<a href='/'><img height='75' src='/img/184px-Commutative_diagram_for_morphism.png' /></a>
 Functional Programming With Friends
-</h1>
+</header>
 
+<section id='content'>
 
 <h2 id="buildingtestingreleasing">Building/Testing/Releasing</h2>
 
@@ -68,7 +65,8 @@ entry URLs start with <code>/blog</code>.</p>
 
 <ul>
   <li><a href="https://daringfireball.net/projects/markdown/syntax">Markdown Syntax Reference</a></li>
-  <li>XXX Which markdown generator is Jekyll using by default?</li>
+  <li>Jekyll uses <a href="http://kramdown.gettalong.org/syntax.html">kramdown</a> to tranform markdown by default. This has some
+nice extensions (e.g.: Footnotes, math, tables…)</li>
   <li>XXX Is <a href="http://redcloth.org">RedCloth</a> built in? It looked like it from the build. That would
 allow use of Textile…</li>
   <li>GitHub offers extra Markdown stuff like ‘@cjs-cynic-net’ to reference
@@ -111,5 +109,6 @@ side menu defined in a <a href="https://github.com/jekyll/jekyll/blob/master/sit
 before the Jekyll gem. WTF?</li>
 </ul>
 
+</section>
 </body></html>
 
