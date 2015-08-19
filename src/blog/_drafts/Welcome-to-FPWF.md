@@ -3,56 +3,55 @@ title: Welcome to FPWF
 author: Curt Sampson
 ---
 
-Functional Programming with Friends is a small group of developers that
-gets together (usually on-line, but sometimes in person, when we're in
-proximity) once or twice a week to play around with programming ideas,
-typically related to functional programming. We are currently:
+Functional Programming With Friends started out as a few guys who
+thought they should get together to play with some Haskell or whatever
+(much as most of us had already done individually). But rather than just
+play, we thought there might be a few projects towards which we could
+give a little stab, and soon it sort of snowballed into making a blog,
+code available via Github, and Lord Knows What Else. (Admittedly, this
+is still a rather small snowball.)
 
-* Curt J. Sampson <cjs@cynic.net>
-* Nishant Rodrigues <nishantjr@gmail.com>
-* Karthik Ravikanti <karthik.ravikanti@gmail.com>
+Anyway, our attack on [sbt] and its directory structure[^1] (not yet
+complete) made us feel we should share our travails (i.e., blog),
+perhaps by putting up something on github.io. In the long tradition of
+long distractions we reckoned that we could use [Jekyll] and a standard
+build system with just One Little Change that would Make Everything
+Easy.
 
-Over the past couple of weeks we've been doing some work with Scala,
-[sbt] and the Android build system, with the
-intention of building some programs and even Android apps in Scala.  We'll
-have more to say on that later.
+Having our own domain name, <http://fpwf.starling-software.com>, lead
+to our github.io blog was [easy enough][gh-custdom]. However, we're
+a lot more comfortable with building our release ourselves, in case
+we want to do anything fancy, rather than just uploading our Jekyll
+"source" to [Github](https://github.com/). Given that we were doing a
+project site anyway, where the code to be served goes on the `gh-pages`
+branch, things seemed simple enough: build on master, and commit the
+build results to `gh-pages`.
 
-But while we were doing this, we thought we should start a blog to
-document some of our observations (and perhaps contribute some of
-our tools) to the rest of the world.
+Well, not as simple as you'd think (understanding git internals does
+not mean you understand how to use git plumbing!), but now [it's
+easy][git-commit-filetree]. And there's our first contribution to the
+world, not even in a functional programming language, but shell script.
 
-The obvious place to put the blog was on [github.io]. But it's nice to
-have our own proper domain name. Fortunately, Github makes this
-[surprisingly easy][gh-custdom]. So, [Starling Software][ssoft] donated
-one and after the usual bit of hacking with [Jekyll] we've got a site up
-at the URL you're (probably) looking at now:
-<http://fpwf.starling-software.com>.
+*C'est la vie.*
 
-### Issues
+One other point we'd like to mention:
 
-Two things came up as we were doing this.
-
-First, by default Jekyll uses [Liquid] templates which it fills with
-data from files containing [YAML] and [Markdown]. These sorts of tools
+By default Jekyll uses [Liquid] templates which it fills with data
+from files containing [YAML] and [Markdown]. These sorts of tools
 unfortunately do little error checking, so rather than getting a build
 error when one, e.g., leaves out the author information, you need
 to manually inspect the output to see if it's correct. (I had to do
 considerable manual testing of this post.) We have some thoughts on this
 that you'll see down the road.
 
-Second, we had to do a bit of hacking to get our release process working
-smoothly, since we build on our `master` branch, but the output of the
-build needs to be committed to the `gh-pages` branch. We developed a
-little tool, [git-commit-filetree], to help out with this, and we'll be
-talking about it more in the next post.
 
+[^1]: A directory structure inspired by [Maven], thus the reason for the attack.
 
-[sbt]: http://www.scala-sbt.org/
-[github.io]: https://help.github.com/categories/github-pages-basics/
-[ssoft]: http://www.starling-software.com/
-[gh-custdom]: https://help.github.com/articles/about-custom-domains-for-github-pages-sites
 [Jekyll]: http://jekyllrb.com/
 [Liquid]: https://github.com/Shopify/liquid/wiki
-[YAML]: http://yaml.org
 [Markdown]: https://daringfireball.net/projects/markdown/
+[YAML]: http://yaml.org
+[gh-custdom]: https://help.github.com/articles/about-custom-domains-for-github-pages-sites
 [git-commit-filetree]: https://github.com/cjs-cynic-net/git-commit-filetree
+[github.io]: https://help.github.com/categories/github-pages-basics/
+[sbt]: http://www.scala-sbt.org/
