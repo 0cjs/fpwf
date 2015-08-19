@@ -3,11 +3,11 @@ layout: 'default'
 title: 'Functional Programming With Friends'
 ---
 
-FPWF is a small group of programmers that mess around with functional
-programming and other ideas.
+FPWF is a small group of developers that mess around with mathematics,
+functional programming and whatever else happens to distract us.
 
 
-### People
+### Current Members
 
 * Curt J. Sampson <cjs@cynic.net>
 * Nishant Rodrigues <nishantjr@gmail.com>
