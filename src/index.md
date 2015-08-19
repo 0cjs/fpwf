@@ -24,6 +24,7 @@ functional programming and whatever else happens to distract us.
 
 ### Publications
 
+* Our first blog entry: [{{site.posts.first.title}}]({{site.posts.first.url}})
 * **[From Ruby to Haskell: An Introduction][r2ht]** (by Curt Sampson).<br/>
   A presentation/tutorial aimed at showing Ruby programmers some
   interesting and powerful elements of Haskell.
