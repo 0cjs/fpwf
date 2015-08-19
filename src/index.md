@@ -3,7 +3,7 @@ layout: 'default'
 title: 'Functional Programming With Friends'
 ---
 
-FPWF is a small group of programmers that messes around with functional
+FPWF is a small group of programmers that mess around with functional
 programming and other ideas.
 
 
