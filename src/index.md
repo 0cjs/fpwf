@@ -4,11 +4,31 @@ title: 'Functional Programming With Friends'
 ---
 
 FPWF is a small group of programmers that messes around with functional
-programming and other ideas. It currently consists of:
+programming and other ideas.
 
-* Curt Sampson <cjs@cynic.net>
+
+### People
+
+* Curt J. Sampson <cjs@cynic.net>
 * Nishant Rodrigues <nishantjr@gmail.com>
 * Karthik Ravikanti <karthik.ravikanti@gmail.com>
+
+
+### Software and Projects
+
+* [`git-commit-filetree`][gcf] - commit arbitrary files to an arbitrary
+  git branch (used to build this site)
+
+[gcf]: https://github.com/cjs-cynic-net/git-commit-filetree
+
+
+### Publications
+
+* **[From Ruby to Haskell: An Introduction][r2ht]** (by Curt Sampson).<br/>
+  A presentation/tutorial aimed at showing Ruby programmers some
+  interesting and powerful elements of Haskell.
+
+[r2ht]: https://github.com/cjs-cynic-net/ruby2haskell-tutorial
 
 ### Current Research
 
