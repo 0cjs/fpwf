@@ -3,13 +3,13 @@ title: Welcome to FPWF
 author: Curt Sampson
 ---
 
-Functional Programming With Friends started out as a few guys who
-thought they should get together to play with some Haskell or whatever
-(much as most of us had already done individually). But rather than just
-play, we thought there might be a few projects towards which we could
-give a little stab, and soon it sort of snowballed into making a blog,
-code available via Github, and Lord Knows What Else. (Admittedly, this
-is still a rather small snowball.)
+Functional Programming With Friends started out as a few guys who wanted
+to get together to play with some Haskell or whatever (much as most of
+us had already done individually). But rather than just play, we thought
+there might be a few projects toward which we could give a little stab,
+and soon it sort of snowballed into making a blog, code available via
+Github, and Lord Knows What Else. (Ok, yes, this is still a rather small
+snowball.)
 
 Anyway, our attack on [sbt] and its directory structure[^1] (not yet
 complete) made us feel we should share our travails (i.e., blog),
@@ -27,10 +27,11 @@ project site anyway, where the code to be served goes on the `gh-pages`
 branch, things seemed simple enough: build on master, and commit the
 build results to `gh-pages`.
 
-Well, not as simple as you'd think (understanding git internals does
-not mean you understand how to use git plumbing!), but now [it's
-easy][git-commit-filetree]. And there's our first contribution to the
-world, not even in a functional programming language, but shell script.
+Well, not as simple as you'd think. (It turns out that understanding git
+internals does not mean you understand how to use git plumbing.) But now
+[it's easy][git-commit-filetree]. And there's our first contribution
+to the world, not even in a functional programming language, but shell
+script. (Sigh.)
 
 *C'est la vie.*
 
