@@ -2,7 +2,10 @@ body {
     font-size: 100%;    /* Makes em measurements scale reasonably. */
     font-family: serif;
     margin: 1em;
+    max-width: 45em
 }
+
+a:not(:hover) { text-decoration:none }
 
 header {
     display: table-row;
@@ -14,6 +17,8 @@ header > * {
     padding-right: 0.5em
 }
 
-.author { font-style: italic; }
+nav           { background: #ddd; }
+nav > ul      {  margin: 0;        padding-left: 1em;  }
+nav > ul > li {  display: inline;  padding: 0.5em;     }
 
-#content { max-width: 45em; }
+.author { font-style: italic; }
