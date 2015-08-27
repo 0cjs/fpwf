@@ -1,0 +1,27 @@
+body {
+    font-size: 100%;    /* Makes em measurements scale reasonably. */
+    font-family: serif;
+    margin: 1em;
+    max-width: 45em
+}
+
+a:not(:hover) { text-decoration:none }
+
+header {
+    display: table-row;
+    font-size: 2em;
+}
+header > * {
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 0.5em
+}
+
+nav           { background: #ddd; }
+nav > ul      {  margin: 0;        padding-left: 1em;  }
+nav > ul > li {  display: inline;  padding: 0.5em;     }
+
+ol.post-list { padding: 1em; list-style-type: none; }
+.post-list-title { font-size: 1.2em; font-weight: bold; }
+.author { font-style: italic; }
+.post-excerpt { padding-left: 1em; }
