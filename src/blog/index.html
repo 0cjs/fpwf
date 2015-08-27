@@ -1,0 +1,15 @@
+---
+layout: default
+title: FPWF Blog
+---
+
+<ol class='post-list'>
+{% for post in site.posts %}
+    <li>
+        <a class='post-list-title' href='{{post.url}}'>{{post.title}}</a></br>
+        <span class='author'>By {{post.author}},
+            {{post.date | date: '%F'}}.</span></br>
+        <div class='post-excerpt'>{{post.excerpt}}</div>
+    </li>
+{% endfor %}
+</ol>

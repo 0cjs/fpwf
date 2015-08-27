@@ -21,4 +21,7 @@ nav           { background: #ddd; }
 nav > ul      {  margin: 0;        padding-left: 1em;  }
 nav > ul > li {  display: inline;  padding: 0.5em;     }
 
+ol.post-list { padding: 1em; list-style-type: none; }
+.post-list-title { font-size: 1.2em; font-weight: bold; }
 .author { font-style: italic; }
+.post-excerpt { padding-left: 1em; }
