@@ -9,7 +9,7 @@ a:not(:hover) { text-decoration:none }
 
 header {
     display: table-row;
-    font-size: 2em;
+    font-size: 1.9em;
 }
 header > * {
     display: table-cell;
