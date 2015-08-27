@@ -1,5 +1,13 @@
-header { font-size: 24pt; }
-header { display: table-row; }
+body {
+    font-size: 100%;    /* Makes em measurements scale reasonably. */
+    font-family: serif;
+    margin: 1em;
+}
+
+header {
+    font-size: 2em;
+    display: table-row;
+}
 header > * {
     vertical-align: middle;
     display: table-cell;
