@@ -1,7 +1,8 @@
 body {
     font-size: 100%;    /* Makes em measurements scale reasonably. */
     font-family: serif;
-    margin: 1em;
+    margin: auto;
+    padding: 1em;
     max-width: 45em;
 }
 
