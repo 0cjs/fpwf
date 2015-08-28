@@ -19,14 +19,16 @@
 
 <section id='content'>
 
-<h2 id="buildingtestingreleasing">Building/Testing/Releasing</h2>
+<h2 class="page-title">Developer Reference Card</h2>
+
+<h3 id="buildingtestingreleasing">Building/Testing/Releasing</h3>
 
 <p>Useful commands:</p>
 
 <ul>
   <li><code>./jeckyll build</code></li>
   <li><code>./jeckyll build -D</code></li>
-  <li><code>./jeckyll serve -D -w</code></li>
+  <li><code>./jeckyll serve -D -w -H 0.0.0.0</code></li>
   <li><code>./jeckyll release</code></li>
 </ul>
 
@@ -34,7 +36,7 @@
 today’s date under <a href="http:/blog">http:/blog</a>. <code>-w</code> watches for changes under <code>src/</code>
 and rebuilds (but does not rebuild when <code>_config.yml</code> changes!). You can
 also add <code>-H 0.0.0.0</code> to listen on the external interface if you need to
-easily show the test site to someone on a different host.</p>
+show the test site to someone on a different host.</p>
 
 <p><code>release</code> does a clean build and uses <a href="https://github.com/cjs-cynic-net/git-commit-filetree">git-commit-filetree</a> to commit
 the new output to the <code>gh-pages</code> branch. (This is the branch served by
@@ -44,7 +46,7 @@ host name to which <code>github.io</code> should respond.</p>
 <p>Remember that after this you still need to push to actuall put the
 release on production.</p>
 
-<h2 id="jekyll">Jekyll</h2>
+<h3 id="jekyll">Jekyll</h3>
 
 <p>The <a href="http://jekyllrb.com/docs/home/">official documentation</a> is not terribly concise, nor is it
 really complete enough to be a serious tutorial. (For that, read the
@@ -68,7 +70,7 @@ the special directories. Note that directories such as <code>_posts</code> do no
 have to be under the root; we use <code>src/blog/_posts</code> to have our blog
 entry URLs start with <code>/blog</code>.</p>
 
-<h2 id="markdown">Markdown</h2>
+<h3 id="markdown">Markdown</h3>
 
 <ul>
   <li><a href="https://daringfireball.net/projects/markdown/syntax">Markdown Syntax Reference</a></li>
@@ -81,7 +83,7 @@ a github user, which we don’t. Maybe there’s a module that would let
 us do that? Do we need it?</li>
 </ul>
 
-<h2 id="templates">Templates</h2>
+<h3 id="templates">Templates</h3>
 
 <ul>
   <li><a href="https://github.com/Shopify/liquid/wiki">Liquid</a>
@@ -98,7 +100,7 @@ us do that? Do we need it?</li>
   </li>
 </ul>
 
-<h2 id="example-sites">Example Sites</h2>
+<h3 id="example-sites">Example Sites</h3>
 
 <p>These serve as further documentation and a source of ideas.</p>
 
@@ -109,7 +111,7 @@ do the docs/<code>_docs</code> thing is interesting. (Uses collections? Note the
 side menu defined in a <a href="https://github.com/jekyll/jekyll/blob/master/site/_data/docs.yml">YAML file under _data</a>.)</li>
 </ul>
 
-<h2 id="things-to-fix">Things to Fix?</h2>
+<h3 id="things-to-fix">Things to Fix?</h3>
 
 <ul>
   <li>Jekyll doesn’t read _plugins for extensions itself; they must be loaded
