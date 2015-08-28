@@ -3,20 +3,22 @@ layout: 'default'
 title: 'Site Editing Quickref'
 ---
 
-## Building/Testing/Releasing
+<h2 class='page-title'>Developer Reference Card</h2>
+
+### Building/Testing/Releasing
 
 Useful commands:
 
 * `./jeckyll build`
 * `./jeckyll build -D`
-* `./jeckyll serve -D -w`
+* `./jeckyll serve -D -w -H 0.0.0.0`
 * `./jeckyll release`
 
 `build` and `serve` take the same options. `-D` builds draft posts under
 today's date under <http:/blog>. `-w` watches for changes under `src/`
 and rebuilds (but does not rebuild when `_config.yml` changes!). You can
 also add `-H 0.0.0.0` to listen on the external interface if you need to
-easily show the test site to someone on a different host.
+show the test site to someone on a different host.
 
 `release` does a clean build and uses [git-commit-filetree] to commit
 the new output to the `gh-pages` branch. (This is the branch served by
@@ -29,7 +31,7 @@ release on production.
 [git-commit-filetree]: https://github.com/cjs-cynic-net/git-commit-filetree
 
 
-## Jekyll
+### Jekyll
 
 The [official documentation][jd] is not terribly concise, nor is it
 really complete enough to be a serious tutorial. (For that, read the
@@ -55,7 +57,7 @@ entry URLs start with `/blog`.
 [jds]: http://jekyllrb.com/docs/structure/
 
 
-## Markdown
+### Markdown
 
 * [Markdown Syntax Reference][msr]
 * Jekyll uses [kramdown] to tranform markdown by default. This has some
@@ -71,7 +73,7 @@ entry URLs start with `/blog`.
 [kramdown]: http://kramdown.gettalong.org/syntax.html
 
 
-## Templates
+### Templates
 
 * [Liquid](https://github.com/Shopify/liquid/wiki)
   * [Template Reference][lfd] ("for Designers")
@@ -84,7 +86,7 @@ entry URLs start with `/blog`.
 [lfp]: https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers
 
 
-## Example Sites
+### Example Sites
 
 These serve as further documentation and a source of ideas.
 
@@ -97,7 +99,7 @@ These serve as further documentation and a source of ideas.
 [jssc-sm]: https://github.com/jekyll/jekyll/blob/master/site/_data/docs.yml
 
 
-## Things to Fix?
+### Things to Fix?
 
 * Jekyll doesn't read _plugins for extensions itself; they must be loaded
   before the Jekyll gem. WTF?
