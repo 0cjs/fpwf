@@ -46,3 +46,8 @@ We are currently contemplating:
   they are not, e.g., leaving out fields.
 * Build an Antlr parser for PDF documents, generating an internal data
   structure for analysis, modification and rewriting.
+* Design a presentation or course that would take apart a language (Ruby
+  is an obvious candidate) in to its bits, à la CTM, comparing with other
+  languages (e.g. Clojure for operator overloading, Java for typed vs.
+  untyped, Prolog for logic, Haskell for most-common-control-structure,
+  C++ for ???).
