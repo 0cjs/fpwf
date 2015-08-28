@@ -76,7 +76,8 @@ entry URLs start with `/blog`.
 ### Templates
 
 * [Liquid](https://github.com/Shopify/liquid/wiki)
-  * [Template Reference][lfd] ("for Designers")
+  * [Template Reference][lfd] ("for Designers", from the GitHub wiki)
+  * And from docs.shopify.com:
     * [Tags](https://docs.shopify.com/themes/liquid-documentation/tags)
     * [Objects](https://docs.shopify.com/themes/liquid-documentation/objects)
     * [Filters](https://docs.shopify.com/themes/liquid-documentation/filters)
