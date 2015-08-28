@@ -2,7 +2,7 @@ body {
     font-size: 100%;    /* Makes em measurements scale reasonably. */
     font-family: serif;
     margin: 1em;
-    max-width: 45em
+    max-width: 45em;
 }
 
 a:not(:hover) { text-decoration:none }
@@ -20,6 +20,8 @@ header > * {
 nav           { background: #ddd; }
 nav > ul      {  margin: 0;        padding-left: 1em;  }
 nav > ul > li {  display: inline;  padding: 0.5em;     }
+
+p, ol, ul { line-height: 150%; }
 
 .page-title  { text-align: center; }
 ol.post-list { list-style-type: none;  padding: 1em;  padding-top: 0em; }
