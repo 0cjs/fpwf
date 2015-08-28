@@ -56,3 +56,4 @@ that you'll see down the road.
 [git-commit-filetree]: https://github.com/cjs-cynic-net/git-commit-filetree
 [github.io]: https://help.github.com/categories/github-pages-basics/
 [sbt]: http://www.scala-sbt.org/
+[Maven]: https://en.wikipedia.org/wiki/Apache_Maven
