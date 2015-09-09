@@ -8,10 +8,13 @@ title: FPWF Blog
 <ol class='post-list'>
 {% for post in site.posts %}
     <li>
-        <a class='post-list-title' href='{{post.url}}'>{{post.title}}</a></br>
-        <span class='author'>By {{post.author}},
-            {{post.date | date: '%F'}}.</span></br>
-        <div class='post-excerpt'>{{post.excerpt}}</div>
+        <a class='post-list-title' href='{{post.url}}'>{{post.title}}</a>
+        &nbsp; (<span class='author'>By {{post.author}},
+            {{post.date | date: '%F'}}.</span>)
+            </br>
+        <div class='post-excerpt'>{{post.excerpt}}
+            <a href='{{post.url}}'>(more)</a>
+        </div>
     </li>
 {% endfor %}
 </ol>
