@@ -28,4 +28,5 @@ p, ol, ul { line-height: 150%; }
 ol.post-list { list-style-type: none;  padding: 1em;  padding-top: 0em; }
 .post-list-title { font-size: 1.2em; font-weight: bold; }
 .author { font-style: italic; }
-.post-excerpt { padding-left: 1em; }
+.post-excerpt { padding-left: 1.5em; }
+.post-excerpt > p { margin-top: 0em; margin-bottom: 0em; }
